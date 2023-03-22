@@ -52,7 +52,7 @@ function Gig() {
               <div className="user">
                 <img
                   className="pp"
-                  src={dataUser.img || "/img/noavatar.png"}
+                  src={dataUser?.img || "/img/noavatar.png"}
                   alt=""
                 />
                 <span>{dataUser.username}</span>
