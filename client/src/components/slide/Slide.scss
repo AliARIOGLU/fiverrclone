@@ -2,10 +2,16 @@
   display: flex;
   justify-content: center;
   padding: 100px 0px;
+  position: relative;
 
-  .container {
+  .slide-container {
     width: 1400px;
     position: relative;
+
+    img {
+      max-height: 500px;
+      object-fit: contain;
+    }
 
     h1 {
       margin-bottom: 50px;
@@ -13,25 +19,33 @@
       color: #404145;
       font-weight: 700;
     }
-  }
 
-  .carousel-initialized {
-    position: static;
-  }
+    .next-arrow {
+      position: absolute;
+      font-size: 40px;
+      background-color: black;
+      color: white;
+      padding: 5px;
+      border-radius: 50%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      right: -10px;
+      top: 30%;
+    }
 
-  .carousel-prev,
-  .carousel-next {
-    width: 50px;
-    height: 50px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-
-  .carousel-prev {
-    left: -25px;
+    .prev-arrow {
+      position: absolute;
+      font-size: 40px;
+      background-color: black;
+      color: white;
+      padding: 5px;
+      border-radius: 50%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      bottom: 60%;
+      left: -50px;
+    }
   }
 }

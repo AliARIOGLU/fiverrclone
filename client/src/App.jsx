@@ -2,6 +2,9 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./app.scss";
 
+//slider
+import "slick-carousel/slick/slick.css";
+
 //tanstack
 
 import {

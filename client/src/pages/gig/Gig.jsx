@@ -1,10 +1,10 @@
 import React from "react";
 import "./Gig.scss";
-import { Slider } from "infinite-react-carousel/lib";
 import { useQuery } from "@tanstack/react-query";
 import { Link, useParams } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 import Reviews from "../../components/reviews/Reviews";
+import Slide from "../../components/slide/Slide";
 
 function Gig() {
   const { id } = useParams();
@@ -70,11 +70,11 @@ function Gig() {
                 )}
               </div>
             )}
-            <Slider slidesToShow={1} arrowsScroll={1} className="slider">
+            <Slide slidesToShow={1} arrowsScroll={1} type="sm">
               {data?.images?.map((img, idx) => (
                 <img src={img} alt="" key={idx} />
               ))}
-            </Slider>
+            </Slide>
             <h2>About This Gig</h2>
             <p>{data.desc}</p>
             {isLoadingUser ? (
