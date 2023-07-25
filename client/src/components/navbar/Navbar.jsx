@@ -32,6 +32,14 @@ function Navbar() {
       }
     };
 
+    const onEscape = (e) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", onEscape);
+
     document.addEventListener("click", onClick);
 
     return () => {
@@ -39,6 +47,7 @@ function Navbar() {
       window.removeEventListener("scroll", isActiveMenu);
 
       document.removeEventListener("click", onClick);
+      document.removeEventListener("keydown", onEscape);
     };
   }, []);
 
